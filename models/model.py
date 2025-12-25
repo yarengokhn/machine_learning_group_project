@@ -55,24 +55,21 @@ class HybridEncoder(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
-        # x: [batch, seq_len]
         embedded = self.dropout(self.embedding(x))
-        
-        # Önce LSTM'den geçirelim
         lstm_out, (hidden, cell) = self.lstm(embedded)
-        
-        # Boyutu Transformer için ayarla
         lstm_out = self.reduce_dim(lstm_out)
-        
-        # Sonra Transformer'dan geçirelim (Daha güçlü dikkat/attention sağlar)
         transformer_out = self.transformer_encoder(lstm_out)
         
-        # hidden ve cell'i decoder'a göndermek üzere hazırlayalım 
-        # (Bidirectional olduğu için katmanları birleştiriyoruz)
-        hidden = torch.mean(hidden, dim=0, keepdim=True) # Basitleştirilmiş birleştirme
-        cell = torch.mean(cell, dim=0, keepdim=True)
+        # --- BURASI KRİTİK: Boyut Eşitleme ---
+        # Bidirectional LSTM'den gelen katmanları birleştiriyoruz
+        combined_hidden = torch.mean(hidden, dim=0, keepdim=True) 
+        combined_cell = torch.mean(cell, dim=0, keepdim=True)     
+
+        # Decoder n_layers=2 beklediği için 1 olan boyutu 2'ye çıkarıyoruz
+        final_hidden = torch.cat([combined_hidden, combined_hidden], dim=0) 
+        final_cell = torch.cat([combined_cell, combined_cell], dim=0)     
         
-        return transformer_out, hidden, cell
+        return transformer_out, final_hidden, final_cell
     
 class LSTMDecoder(nn.Module):
     def __init__(self, vocab_size, embedding_dim, hidden_dim, n_layers=2, dropout=0.3):
