@@ -1,5 +1,5 @@
 # machine_learning_group_project
-## Colab Experiment (Individual Contribution)
+## Colab Experiment 
 
 This experiment was executed in Google Colab to validate the full training pipeline.
 
