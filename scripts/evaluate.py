@@ -1,3 +1,7 @@
+"""
+Evaluation script for the trained code summarization model.
+Computes loss on held-out validation data.
+"""
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
