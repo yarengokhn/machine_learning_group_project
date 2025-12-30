@@ -1,0 +1,21 @@
+model:
+  name: seq2seq
+  encoder: hybrid_encoder
+  decoder: hybrid_decoder
+  hidden_size: 256
+  num_layers: 2
+
+tokenization:
+  vocab_size: 8000
+  max_input_length: 256
+  max_output_length: 64
+
+training:
+  batch_size: 16
+  learning_rate: 0.0003
+  epochs: 5
+  device: cuda
+
+generation:
+  max_new_tokens: 64
+  beam_size: 4
