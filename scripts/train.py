@@ -1,3 +1,6 @@
+import yaml
+with open("config.yaml", "r") as f:
+    config = yaml.safe_load(f)
 """
 Training script implementing the full training loop:
 data loading, tokenizer initialization, training, and checkpoint saving.
