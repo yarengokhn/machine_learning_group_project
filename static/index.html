@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <h1>AI Code Summarizer</h1>
+            <p>Paste your Python code below to generate a semantic summary.</p>
+        </header>
+
+        <section class="editor-section">
+            <div class="editor-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="filename">main.py</span>
+            </div>
+            <textarea id="code-input" spellcheck="false" placeholder="def calculate_area(radius):&#10;    return 3.14 * radius ** 2"></textarea>
+        </section>
+
+        <div class="controls">
+            <button id="summarize-btn">
+                <span class="btn-text">Generate Summary</span>
+                <div class="loader" id="btn-loader"></div>
+            </button>
+        </div>
+
+        <section class="result-section" id="result-area">
+            <h3>Generated Summary</h3>
+            <div class="summary-box">
+                <p id="summary-text">Your summary will appear here...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with PyTorch & Flask</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+model_name: "improved_v1"
+embedding_dim: 256
+hidden_dim: 512
+n_layers: 1
+dropout: 0.5
+
+training:
+  epochs: 20
+  patience: 3
+  batch_size: 32
+  learning_rate: 0.001
+  clip: 1.0
+
+data:
+  use_codesearchnet: true
+  csn_limit: 5000
+  data_path: "data/raw/dataset.csv"

@@ -1,0 +1,56 @@
+/Users/nat/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Loading CodeSearchNet dataset (CodeXGlue, train split, limit=5000)...
+Code Vocab Size: 21088
+Summary Vocab Size: 7320
+/Users/nat/Library/Python/3.9/lib/python/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.5 and num_layers=1
+  warnings.warn(
+Starting training for 20 epochs (Patience: 3)...
+Epoch: 01 | Time: 5m 9s *
+	Train Loss: 5.487 | Train PPL: 241.586
+	 Val. Loss: 4.649 |  Val. PPL: 104.460 (Best: 4.649)
+Epoch: 02 | Time: 4m 48s *
+	Train Loss: 3.499 | Train PPL:  33.082
+	 Val. Loss: 3.625 |  Val. PPL:  37.512 (Best: 3.625)
+Epoch: 03 | Time: 4m 46s *
+	Train Loss: 2.299 | Train PPL:   9.961
+	 Val. Loss: 2.619 |  Val. PPL:  13.721 (Best: 2.619)
+Epoch: 04 | Time: 4m 54s 
+	Train Loss: 1.579 | Train PPL:   4.850
+	 Val. Loss: 2.970 |  Val. PPL:  19.496 (Best: 2.619)
+Epoch: 05 | Time: 5m 3s *
+	Train Loss: 1.125 | Train PPL:   3.079
+	 Val. Loss: 2.365 |  Val. PPL:  10.643 (Best: 2.365)
+Epoch: 06 | Time: 4m 54s *
+	Train Loss: 0.877 | Train PPL:   2.404
+	 Val. Loss: 2.136 |  Val. PPL:   8.463 (Best: 2.136)
+Epoch: 07 | Time: 5m 5s *
+	Train Loss: 0.710 | Train PPL:   2.035
+	 Val. Loss: 2.085 |  Val. PPL:   8.042 (Best: 2.085)
+Epoch: 08 | Time: 4m 54s 
+	Train Loss: 0.616 | Train PPL:   1.851
+	 Val. Loss: 2.393 |  Val. PPL:  10.950 (Best: 2.085)
+Epoch: 09 | Time: 4m 57s *
+	Train Loss: 0.541 | Train PPL:   1.718
+	 Val. Loss: 1.862 |  Val. PPL:   6.438 (Best: 1.862)
+Epoch: 10 | Time: 5m 27s 
+	Train Loss: 0.474 | Train PPL:   1.606
+	 Val. Loss: 2.432 |  Val. PPL:  11.380 (Best: 1.862)
+Epoch: 11 | Time: 5m 24s *
+	Train Loss: 0.406 | Train PPL:   1.501
+	 Val. Loss: 1.767 |  Val. PPL:   5.851 (Best: 1.767)
+Epoch: 12 | Time: 5m 7s 
+	Train Loss: 0.364 | Train PPL:   1.439
+	 Val. Loss: 1.849 |  Val. PPL:   6.352 (Best: 1.767)
+Epoch: 13 | Time: 5m 34s *
+	Train Loss: 0.333 | Train PPL:   1.395
+	 Val. Loss: 1.473 |  Val. PPL:   4.364 (Best: 1.473)
+Epoch: 14 | Time: 4m 58s *
+	Train Loss: 0.249 | Train PPL:   1.283
+	 Val. Loss: 1.419 |  Val. PPL:   4.132 (Best: 1.419)
+Epoch: 15 | Time: 4m 57s *
+	Train Loss: 0.219 | Train PPL:   1.244
+	 Val. Loss: 1.221 |  Val. PPL:   3.392 (Best: 1.221)
+Epoch: 16 | Time: 4m 56s *
+	Train Loss: 0.150 | Train PPL:   1.162
+	 Val. Loss: 1.151 |  Val. PPL:   3.160 (Best: 1.151)

@@ -1,0 +1,16 @@
+model_name: "seq2seq_attention"
+embedding_dim: 256
+hidden_dim: 512
+n_layers: 1
+dropout: 0.5
+
+training:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 0.001
+  clip: 1.0
+
+data:
+  use_codesearchnet: false
+  csn_limit: 1000
+  data_path: "data/dataset.csv"

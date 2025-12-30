@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+checkpoints/
+data/python/
+training_log.csv
+*.pt

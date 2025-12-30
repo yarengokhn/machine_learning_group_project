@@ -1,0 +1,12 @@
+torch
+torchvision
+pandas
+nltk
+rouge
+numpy
+tqdm
+datasets
+pyarrow
+flask
+flask-cors
+pyyaml
