@@ -18,7 +18,7 @@ from torch.utils.data import DataLoader
 # Veriyi PyTorch formatına çevir
 tokenized_dataset.set_format(type='torch', columns=['input_ids', 'labels'])
 # DataLoader: Veriyi 32'şerli gruplar (batch) halinde modele gönderir
-train_iterator = DataLoader(tokenized_dataset['train'], batch_size=32, shuffle=True)
+train_iterator = DataLoader(tokenized_dataset, batch_size=32, shuffle=True)
 
 # --- 2. Hiperparametreler ve Model ---
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -58,9 +58,15 @@ def train_epoch(model, iterator, optimizer, criterion):
 
 # --- 4. Eğitimi Başlat ---
 print(f"Eğitim {DEVICE} üzerinde başlıyor...")
+
 for epoch in range(5):
     loss = train_epoch(model, train_iterator, optimizer, criterion)
     print(f"Epoch: {epoch+1} | Loss: {loss:.4f}")
-    
-    # Modeli kaydet (Rapor için lazım olacak)
-    torch.save(model.state_dict(), f"models/model_v1_epoch{epoch+1}.pt")
+
+# --- Save trained model (AFTER training) ---
+import os
+import torch
+
+os.makedirs("models", exist_ok=True)
+torch.save(model.state_dict(), "models/model.pt")
+print("Saved: models/model.pt")
