@@ -77,3 +77,14 @@ Function that returns the sum of two numbers.
 - The dataset used is limited in size and intended for demonstration purposes.
 - Training was performed for a small number of epochs to fit within Colab constraints.
 - The focus is on clarity, reproducibility, and separation of concerns.
+
+## Configuration
+
+All key model, tokenization, training, and inference parameters are defined in a dedicated configuration file (`config.yaml`).
+This design improves reproducibility and allows easy experimentation without modifying the source code.
+
+The configuration includes:
+- model architecture parameters
+- tokenization limits
+- training hyperparameters
+- generation settings
