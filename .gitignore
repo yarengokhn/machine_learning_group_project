@@ -5,3 +5,4 @@ checkpoints/
 data/python/
 # training_log.csv
 *.pt
+data/test.csv
